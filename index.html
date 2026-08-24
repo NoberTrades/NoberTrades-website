@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NoberTrades — Trade Smarter</title>
+<meta name="description" content="NoberTrades trading tools, EAs, signals, education and market intelligence.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"><span class="brand-mark">N</span><span>NOBER<span>TRADES</span></span></a>
+  <button class="menu" aria-label="Menu">☰</button>
+  <nav>
+    <a href="#home">Home</a><a href="#tools">Tools</a><a href="#bots">Bots</a>
+    <a href="#signals">Signals</a><a href="#academy">Academy</a><a href="#pricing">Pricing</a>
+  </nav>
+  <a class="nav-cta" href="client/login.html">Client Area</a>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">TRADING • TECHNOLOGY • EDUCATION</div>
+    <h1>Trade with <em>precision.</em><br>Build with purpose.</h1>
+    <p>NoberTrades brings trading tools, automated systems, market intelligence and education into one professional platform.</p>
+    <div class="actions"><a class="btn primary" href="#tools">Explore Tools</a><a class="btn ghost" href="#bots">View Bots →</a></div>
+    <div class="trust"><span>● XAUUSD</span><span>● MT4 / MT5</span><span>● Risk focused</span></div>
+  </div>
+  <div class="terminal">
+    <div class="terminal-top"><span>MARKET TERMINAL</span><span class="live">● LIVE</span></div>
+    <div class="chart">
+      <div class="grid"></div>
+      <svg viewBox="0 0 600 270" preserveAspectRatio="none">
+        <polyline points="0,215 35,200 70,210 105,165 140,178 175,130 210,148 245,110 280,125 315,78 350,98 385,60 420,80 455,45 490,64 525,30 560,55 600,18"/>
+      </svg>
+      <div class="price">$3,381.42 <small>+1.84%</small></div>
+    </div>
+    <div class="quotes"><div><b>XAUUSD</b><small>Gold</small><strong>3381.42</strong></div><div><b>US100</b><small>Nasdaq</small><strong>23,118</strong></div><div><b>USOIL</b><small>WTI</small><strong>64.72</strong></div></div>
+  </div>
+</section>
+
+<section class="ticker"><span>MARKET INTELLIGENCE</span><span>XAUUSD 3381.42 ▲</span><span>US100 23118 ▲</span><span>EURUSD 1.1712</span><span>GBPUSD 1.3510</span></section>
+
+<section id="tools" class="section">
+  <div class="section-head"><div><div class="eyebrow">TRADING TOOLS</div><h2>Calculate before you trade.</h2></div><p>Practical calculators designed for disciplined risk management.</p></div>
+  <div class="tool-grid">
+    <article class="tool-card"><div class="icon">⌁</div><h3>Risk Calculator</h3><p>Calculate position size from balance, risk and stop-loss.</p>
+      <div class="form"><label>Balance <input id="bal" type="number" value="1000"></label><label>Risk % <input id="risk" type="number" value="1" step=".1"></label><label>Stop (pips) <input id="sl" type="number" value="100"></label><label>Pip value / lot <input id="pip" type="number" value="10"></label><button class="btn primary" onclick="calcRisk()">Calculate</button><div class="result" id="riskResult">0.10 lots</div></div>
+    </article>
+    <article class="tool-card"><div class="icon">↔</div><h3>Risk / Reward</h3><p>Instantly evaluate whether a setup is worth taking.</p>
+      <div class="form"><label>Entry <input id="entry" type="number" value="3350"></label><label>Stop Loss <input id="stop" type="number" value="3340"></label><label>Take Profit <input id="tp" type="number" value="3370"></label><button class="btn primary" onclick="calcRR()">Calculate</button><div class="result" id="rrResult">R:R 2.00</div></div>
+    </article>
+    <article class="tool-card"><div class="icon">%</div><h3>Compounding</h3><p>Project account growth using a target return and periods.</p>
+      <div class="form"><label>Starting balance <input id="start" type="number" value="100"></label><label>Return / period % <input id="ret" type="number" value="5"></label><label>Periods <input id="periods" type="number" value="20"></label><button class="btn primary" onclick="calcCompound()">Calculate</button><div class="result" id="compoundResult">$265.33</div></div>
+    </article>
+    <article class="tool-card"><div class="icon">◈</div><h3>Profit / Loss</h3><p>Estimate P/L from points, lot size and point value.</p>
+      <div class="form"><label>Points <input id="points" type="number" value="100"></label><label>Lots <input id="lots" type="number" value="0.10" step=".01"></label><label>Value / point / lot <input id="pointval" type="number" value="1"></label><button class="btn primary" onclick="calcPL()">Calculate</button><div class="result" id="plResult">$10.00</div></div>
+    </article>
+  </div>
+</section>
+
+<section id="bots" class="section dark">
+  <div class="section-head"><div><div class="eyebrow">AUTOMATION</div><h2>NoberTrades Bots.</h2></div><p>Automated systems built for MT4 and MT5. Always test on demo before live deployment.</p></div>
+  <div class="product-grid">
+    <article class="product"><span class="tag">AGGRESSIVE</span><h3>NoberTrades Bot 2.0</h3><div class="price-big">$75</div><p>Fast execution • Momentum logic • Re-entry framework</p><ul><li>MT4 / MT5</li><li>Risk controls</li><li>Setup guide</li></ul><a class="btn primary" href="#contact">Get Bot</a></article>
+    <article class="product featured"><span class="tag">RISK MANAGED</span><h3>NoberTrades Bot Final</h3><div class="price-big">$125</div><p>Balanced automation designed around controlled exposure.</p><ul><li>MT4 / MT5</li><li>Trailing protection</li><li>Risk management</li></ul><a class="btn primary" href="#contact">Get Bot</a></article>
+    <article class="product"><span class="tag">HFT</span><h3>Mr Envy</h3><div class="price-big">Coming soon</div><p>High-frequency execution concept for volatile markets.</p><ul><li>Gold focused</li><li>Re-entry engine</li><li>Advanced protection</li></ul><a class="btn ghost" href="#contact">Join Waitlist</a></article>
+  </div>
+</section>
+
+<section id="signals" class="section">
+  <div class="section-head"><div><div class="eyebrow">MARKET SIGNALS</div><h2>Stay ahead of the move.</h2></div><p>A clean space for trade ideas, results and market commentary.</p></div>
+  <div class="signal-table"><div class="row head"><span>PAIR</span><span>BIAS</span><span>ENTRY</span><span>STATUS</span></div>
+    <div class="row"><b>XAUUSD</b><span class="buy">BUY</span><span>3372–3378</span><span>Watching</span></div>
+    <div class="row"><b>US100</b><span class="buy">BUY</span><span>23080–23120</span><span>Watching</span></div>
+    <div class="row"><b>EURUSD</b><span class="sell">SELL</span><span>1.1730–1.1740</span><span>Waiting</span></div>
+  </div>
+</section>
+
+<section id="academy" class="section academy">
+  <div><div class="eyebrow">NOBERTRADES ACADEMY</div><h2>Learn the market.<br>Master the process.</h2><p>Structured education from fundamentals to execution, risk management and automation.</p><a class="btn primary" href="#pricing">Explore Education</a></div>
+  <div class="academy-cards"><div><b>01</b><h3>Foundation</h3><p>Market structure, pairs, sessions and execution.</p></div><div><b>02</b><h3>Risk</h3><p>Position sizing, drawdown control and consistency.</p></div><div><b>03</b><h3>Automation</h3><p>Understand EAs, testing and deployment.</p></div></div>
+</section>
+
+<section id="pricing" class="section">
+  <div class="section-head"><div><div class="eyebrow">PRICING</div><h2>Choose your path.</h2></div></div>
+  <div class="pricing-grid">
+    <article><h3>Signals</h3><div class="price-big">$15<span>/week</span></div><p>Market ideas and trade updates.</p><a class="btn ghost" href="#contact">Join</a></article>
+    <article class="featured"><h3>Online Mentorship</h3><div class="price-big">$125</div><p>Guidance until you reach your defined trading objective.</p><a class="btn primary" href="#contact">Apply</a></article>
+    <article><h3>Physical Mentorship</h3><div class="price-big">$275</div><p>Hands-on learning and structured trading development.</p><a class="btn ghost" href="#contact">Apply</a></article>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div><div class="eyebrow">READY?</div><h2>Build your edge with NoberTrades.</h2><p>Questions, mentorship, bots or partnerships? Reach out directly.</p></div>
+  <div class="contact-actions"><a class="btn primary" href="https://wa.me/256762444871" target="_blank">WhatsApp NoberTrades</a><a class="btn ghost" href="mailto:nobertrades@gmail.com">Email Us</a></div>
+</section>
+</main>
+
+<footer><div class="brand"><span class="brand-mark">N</span><span>NOBER<span>TRADES</span></span></div><p>© 2026 NoberTrades. Trading involves risk. Nothing on this site is financial advice.</p><div><a href="#home">Home</a><a href="#tools">Tools</a><a href="#contact">Contact</a></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
